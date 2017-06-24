@@ -9,6 +9,7 @@ import { Provider } from 'react-redux';
 import {
   AppRegistry,
   StyleSheet,
+  NativeModules,
 } from 'react-native';
 
 import store from './src/store';
@@ -24,6 +25,12 @@ export default class MyTemplate extends Component {
     );
   }
 }
+
+const XXX = NativeModules.XXX;
+
+XXX.getAlbums().then((albums) => {
+  console.log(albums);
+});
 
 const styles = StyleSheet.create({
   container: {
