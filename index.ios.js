@@ -29,6 +29,9 @@ export default class MyTemplate extends Component {
 console.log(NativeModules);
 const CalenderModule = NativeModules.CalenderModule;
 CalenderModule.addEvent('Birthday Party', '4 Privet Drive, Surrey');
+CalenderModule.findEvents().then(hoge => {
+  console.log(hoge);
+})
 
 const styles = StyleSheet.create({
   container: {
