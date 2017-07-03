@@ -26,11 +26,9 @@ export default class MyTemplate extends Component {
   }
 }
 
-const XXX = NativeModules.XXX;
-
-XXX.getAlbums().then((albums) => {
-  console.log(albums);
-});
+console.log(NativeModules);
+const CalenderModule = NativeModules.CalenderModule;
+CalenderModule.addEvent('Birthday Party', '4 Privet Drive, Surrey');
 
 const styles = StyleSheet.create({
   container: {
